@@ -1,0 +1,445 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*All*/
+body{
+    background-image: url(/Imagenes/Snow\ Background.jpg);
+    background-repeat: repeat;
+    color: black;
+    font-family: 'Press Start 2P', cursive;
+}
+.grid{
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+    "links links links . . ."
+    "title title title title title title"
+    "area area area area area area"
+    "area area area area area area"
+    "foot foot foot foot foot foot";
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-content: stretch;
+}
+.links{
+    width: fit-content;
+    grid-area: links;
+    list-style-type: none;
+    margin: 20px;
+    border: black 2px double;
+}
+.links li{
+    display: inline-block;
+    margin: 10px;
+    background-color: burlywood;
+    padding: 10px;
+    opacity: 0.8;
+    border: black 2px double;
+}
+.links li:hover{
+    background-color: darkgoldenrod;
+    opacity: 1;
+}
+body div header{
+    width: 98.5%;
+    margin: 20px;
+    padding: 100px; 
+    border: black 15px double;
+    text-align: center;
+}
+body div header h1{
+    font-family: 'Palette Mosaic', cursive;
+    font-weight: bold;
+    font-size: 150px;    
+}
+.title{
+    grid-area: title;
+}
+.area{
+    grid-area: area;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "novedades novedades videos videos shows shows"
+    "contacto contacto contacto disc disc disc";
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: stretch;
+}
+main{
+    font-family: 'Abril Fatface', cursive;
+    margin: 20px;
+    overflow: auto;
+    display: inline-block;
+}
+main section{
+    overflow: auto;
+    padding: 20px;
+    display: inline-block; 
+}
+footer{
+    width: 100%;
+    margin: 20px;    
+}
+footer h4{
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+}
+footer a{    
+    font-family: 'Press Start 2P', cursive;
+}
+.foot{
+    grid-area: foot;
+    display: inline-block;
+    }
+/*index*/
+.novedades{
+    grid-area: novedades;
+    border: black 5px double;
+    overflow: auto;
+    display: inline-block; 
+}
+.videos{
+    grid-area: videos;
+    border: black 5px double;
+    overflow: auto;  
+    display: inline-block; 
+}
+.shows{
+    
+    grid-area: shows;
+    border: black 5px double;
+    overflow: auto;
+    display: inline-block; 
+}
+.contacto{
+    
+    grid-area: contacto;
+    border: black 5px double;
+    overflow: auto;
+    display: inline-block; 
+}
+.disc{
+    grid-area: disc;
+    border: black 5px double;
+    overflow: auto;
+    display: inline-block; 
+}
+.disc img{
+    width: 500px;
+}
+.app{
+    grid-area: app;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    margin-left: 90%;
+    overflow: auto;
+    display: inline-block;
+    position: fixed;
+    top: 0;
+}
+/*bandhistory*/
+.bandHistory{
+    margin: 0px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+    "prelude prelude prelude prelude"
+    "middle middle middle middle"
+    "interlude interlude interlude interlude"
+    "end end end end";
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: stretch;
+}
+.prelude{
+    grid-area: prelude;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "origenes origenes img1 iframe1"
+    "origenes origenes iframe2 img2";
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: stretch;
+}
+.origenes{
+    grid-area: origenes;
+    border: black 5px double;
+    width: 100%;
+}
+.img1{
+    grid-area: img1;
+}
+.iframe1{
+    grid-area: iframe1;
+}
+.iframe2{
+    grid-area: iframe2;
+}
+.img2{
+    grid-area: img2;
+}
+.middle{
+    grid-area: middle;
+    margin: 20px;
+    padding: 100px; 
+    border: black 15px double;
+    text-align: center;
+    font-family: 'Palette Mosaic', cursive;
+    font-weight: bold;
+    font-size: 100px;
+}
+.interlude{
+    grid-area: interlude;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "actualidad actualidad img3 iframe3"
+    "actualidad actualidad iframe4 img4";
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: stretch;
+}
+.actualidad{
+    grid-area: actualidad;
+    border: black 5px double;
+}
+.img3{
+    grid-area: img3;
+}
+.iframe3{
+    grid-area: iframe3;
+}
+.iframe4{
+    grid-area: iframe4;
+}
+.img4{
+    grid-area: img4;
+}
+.end{
+    grid-area: end;
+    margin: 20px;
+    padding: 100px; 
+    border: black 15px double;
+    text-align: center;
+    font-family: 'Palette Mosaic', cursive;
+    font-weight: bold;
+    font-size: 100px;
+}
+/*discography*/
+.discography{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        "imgDisc imgDisc imgDisc imgDisc imgDisc imgDisc"
+        "nameDisc nameDisc nameDisc nameDisc nameDisc nameDisc"
+        "audioDisc audioDisc audioDisc audioDisc audioDisc audioDisc"
+        "infoDisc infoDisc infoDisc infoDisc infoDisc infoDisc";
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        justify-content: stretch;
+}
+.imgDisc{
+    grid-area: imgDisc;
+    display: grid;
+        grid-column-gap: 20px;
+        width: 100%;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 
+        "d1 d2 d3 d4 d5 d6";
+}
+.nameDisc{
+    text-align: center;
+    grid-area: nameDisc;
+    display: grid;
+        width: 100%;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 
+        "d1 d2 d3 d4 d5 d6";
+}
+.audioDisc{
+    margin-left: 25px;
+    grid-area: audioDisc;
+    display: grid;
+        width: 100%;
+        grid-column-gap: 20px;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 
+        "d1 d2 d3 d4 d5 d6";
+}
+.infoDisc{
+    text-align: left;
+    grid-area: infoDisc;
+    display: grid;
+    width: 100%;
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: 
+    "d1 d2 d3 d4 d5 d6"; 
+}
+/*videos*/
+.vid{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "vi1 vi2 vi3"
+    "vi4 vi5 vi6";
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-content: stretch;
+}
+/*contact*/
+.form{
+    margin: 20px;
+    padding: 20px;
+    width: 500px;
+    text-align: center;
+}
+#coment{
+    width: 100%;
+}
+/*estilo <1024px*/
+@media only screen and (max-width: 1024px){
+    /*All*/
+    nav{
+        width: 100%;
+        margin: 5px 5px 5px 5px;
+    }
+    body header{
+        width: 100%;
+        margin: 5px 5px 5px 5px;
+        padding: 100px; 
+        border: black 15px double;
+        text-align: center;
+    }
+    body header h1{
+        font-family: 'Palette Mosaic', cursive;
+        font-weight: bold;
+        font-size: auto;
+        text-align: center;
+    }
+    h2{
+        font-size: 60px;
+    }
+    a{
+        font-size: smaller;
+    }
+    main{
+        margin: 5px;
+    }
+    footer{
+        margin: 5px;
+        font-size: smaller;
+        text-align: center;
+    }
+    /*index*/
+    .grid{
+        width: 95%;
+        grid-template-areas:
+        "links links links"
+        "title title title"
+        "area area area"
+        "area area area"
+        "foot foot foot";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, auto);
+    }
+    .area{
+        grid-template-areas: 
+        "novedades novedades" 
+        "videos videos" 
+        "shows shows"
+        "contacto contacto" 
+        "disc disc";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, auto);
+    }
+    .disc img{
+        width: 300px;
+    }
+    .videos iframe{
+        width: 300px;    
+    }
+    .app{
+        display: none;
+    }
+    /*bandHistory*/
+    .bandHistory{
+        width: 95%;
+        grid-template-areas: 
+        "prelude prelude"
+        "prelude prelude"
+        "middle middle"
+        "interlude interlude"
+        "interlude interlude"
+        "end end";
+        grid-template-columns: (2, 1fr);
+        grid-template-rows: repeat(6, auto);
+    }
+    .prelude{   
+        grid-template-areas: 
+        "origenes origenes" 
+        "img1 img1" 
+        "iframe1 iframe1";
+        width: 95%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);   
+        }
+    .interlude{
+        grid-template-areas: 
+        "actualidad actualidad" 
+        "img3 img3" 
+        "iframe3 iframe3";
+        width: 95%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+    .origenes{
+        width: 100%;
+    }
+    img{
+        width: 320px;
+        height: 240px;
+    }
+    iframe{
+        width: 320px;
+        height: 240px;
+    }
+    .img2{
+        display: none;
+    }
+    .img4{
+        display: none;
+    }
+    .iframe2{
+        display: none;
+    }
+    .iframe4{
+        display: none;
+    }
+    .middle{
+        width: auto;
+    }
+    /*discography*/
+
+    /*videos*/
+
+    /*contact*/
+}
