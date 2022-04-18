@@ -99,17 +99,29 @@ footer a{
     display: inline-block;
     }
 /*index*/
+.animate__animated .animate__fadeInUp{
+    animation: fadeinup;
+    animation-duration: 10s;
+}
 .novedades{
     grid-area: novedades;
     border: black 5px double;
     overflow: auto;
-    display: inline-block; 
+    display: inline-block;    
+}
+.novedades:hover{
+    transform: translate(855px);
+    background-color: snow;
 }
 .videos{
     grid-area: videos;
     border: black 5px double;
     overflow: auto;  
     display: inline-block; 
+}
+.videos:hover{
+    transform: scale(1.1, 1.1);
+    background-color: blanchedalmond;
 }
 .shows{
     
@@ -143,6 +155,10 @@ footer a{
     display: inline-block;
     position: fixed;
     top: 0;
+    transition: all 2s;
+}
+.app:hover{
+    transform: translate(-20px);
 }
 /*bandhistory*/
 .bandHistory{
